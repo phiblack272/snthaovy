@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    :root{
+  /*set your starting image here*/
+  --image: url("https://i.imgur.com/Q2ZST9f.jpeg");
+  --color: #71d8f5;
+  --color2:rgb(113, 216, 245, 0.9); 
+}
+
+body {
+  background-color: var(--color);
+  text-align: center;
+}
+header {
+  text-align: center;
+  width: 50vw;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 30px 30px 30px 30px;
+  animation: 1s ease-out 0s 1 buttonPop;
+  background: var(--color2);
+  padding: 5px;
+  position: relative;
+  line-height: 0.75;
+}
+
+@keyframes buttonPop {
+  0% {
+    transform: scale(1.0);
+  }
+  50% {
+    transform: scale(2.0);
+  }
+  100% {
+    transform: scale(1.0);
+  }
+}
+#hpbd {
+  font-family: 'Dancing Script', cursive;
+  font-size: 5vw;
+  margin: 0.75em 0.75em 0.75em 0.75em;
+}
+
+#background {
+  background-image: var(--image);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height:65vh;
+  width: 90vw;
+  z-index: -2;
+  position: absolute;
+  object-fit: contain;
+  margin-top: 0;
+  margin: 3vh 0vw 0vh 3.25vw;
+  border: 10px solid;
+  border-radius: 20px 20px 20px 20px;
+}
+#button {
+  height: 10vh;
+  width: 30vw;
+  position: relative;
+  border-radius: 50px 50px 50px 50px;
+  text-align: center;
+  border: 2px solid;
+  box-shadow: 0px 5px 10px;
+  animation: rainbow 1s infinite;
+  top: 0;
+  margin: 0 10px;
+  display: inline-block;
+  z-index: 2;
+} 
+
+
+#buttontext{
+  font-family: 'Fredoka One', cursive;
+  font-size: 2vw; 
+  vertical-align: center;
+  position: static;
+}
+
+@keyframes rainbow {
+  0%{
+    background: radial-gradient(white,#f571bc);
+  } 25% {
+    background: radial-gradient(white,#af64fa);
+  } 50% {
+    background: radial-gradient(white,#8064fa);
+  } 75% {
+    background: radial-gradient(white,#648efa);
+  } 100% {
+    background: radial-gradient(white,#f571bc);
+  }
+}
+
+.button { transition: all .5s ease-in-out; }
+.button:hover { transform: scale(1.5); }
+
+/*This is the music iFrame*/
+iframe {
+  height: 0;
+  width: 0;
+  display: none;
+}
+
+</style>
+<body>
+    <header>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Poppins:wght@200;300;400;500;600;700;800&family=Quicksand:wght@500;600&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+      <!-- Uncomment to use Marquee!  <div class="marquee" id="marquee"><p>Happy Birthday!</p></div> -->
+         <p class="pop_text" id="hpbd">Happy            Birthday!</p>
+        
+        <button class="button" id="button">
+          
+          <div class="text" id="buttontext">Click         Me</div>
+          
+        </button>
+        
+      </header>
+      
+      <div class="background" id="background">
+          
+      </div>
+      
+      <script>
+          var button = document.getElementById("button"),
+ buttonText = document.getElementById("buttontext"),
+ c = document.querySelector('#button'),
+ root = document.documentElement;
+
+/* Phrase Changer Code */
+/* You can edit the phrases and images here.*/
+
+button.onclick = (function(){
+  
+var phrases = ["Click dô quên làm hiệu ứng r ", "Happy Birthday!", "Chúc bạn tui luôn vui vẻ", "Xinh đẹp theo năm tháng", "Công việc okila", "Cao như tui =))", "=)) có pồ biết quan tâm c như tui Ỏ Ỏ Ỏ", "Và câu cuối", "Chúc tất cả điều đẹp nhất đến với c "],
+  
+  bImages = ["https://scontent.fsgn5-5.fna.fbcdn.net/v/t1.6435-9/116583310_898169857357037_8024790385246789177_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=174925&_nc_ohc=ZCozqND9CEEAX_-7fUk&_nc_ht=scontent.fsgn5-5.fna&oh=00_AT_eeHD2Pbke5Jmuhq6YNAA0PBdIMdeyWCzFnkHDpaxxLA&oe=62C3AEAA", "https://scontent.fsgn5-12.fna.fbcdn.net/v/t1.6435-9/113149498_897970284043661_1247696319262403965_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=0debeb&_nc_ohc=8MaSbZtAoX8AX9fonyj&_nc_ht=scontent.fsgn5-12.fna&oh=00_AT8TiIYW8CZ1bHOm0Dapg8ywEJjzxINnOWCglSBZF9FCZg&oe=62C64857","https://scontent.fsgn5-13.fna.fbcdn.net/v/t1.6435-9/116209496_897970220710334_1835433332929663411_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=0debeb&_nc_ohc=LjNJX3BrFeMAX8sygV5&_nc_ht=scontent.fsgn5-13.fna&oh=00_AT_wgk47UgidrCAzD7BCLfBeJd4hikGfLxBLRU683aY0Mw&oe=62C5C7B2",
+      "https://scontent.fsgn5-15.fna.fbcdn.net/v/t1.6435-9/114265401_897970087377014_3204253705589457047_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=0debeb&_nc_ohc=TrRnHLPXcoEAX9jxHGG&_nc_ht=scontent.fsgn5-15.fna&oh=00_AT__jvBxm7lotrXdbNc-01HOdEkgGsu50Y7GtxjmzdPR0g&oe=62C42447", 
+      "https://scontent.fsgn5-6.fna.fbcdn.net/v/t1.6435-9/109907063_897969934043696_3351368102982506765_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=0debeb&_nc_ohc=r2YSzKhQLEUAX9Dn5Qo&_nc_ht=scontent.fsgn5-6.fna&oh=00_AT8s0LTc5U-R77AhY73gOE6MOuoXaXrls1AlRbDHImWO-A&oe=62C335AA", "https://scontent.fsgn5-2.fna.fbcdn.net/v/t1.6435-9/111323727_897969987377024_6801969869693808795_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=0debeb&_nc_ohc=5spy-f6ZwfkAX8OqKv1&_nc_ht=scontent.fsgn5-2.fna&oh=00_AT_-KKNf4dRacmnnyWnBJDkHiiUnTrqjlRVGJwIYeLX80g&oe=62C5006E","https://i.imgur.com/binfCky.jpg", "https://scontent.fsgn5-8.fna.fbcdn.net/v/t1.6435-9/102722944_861551637685526_1634009912691367698_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=cqHJy1vxC8UAX8LSZNo&_nc_ht=scontent.fsgn5-8.fna&oh=00_AT9mylflcbag0lXNeyFG-7Ux8TVoAkSi3CktFug9vE9S9g&oe=62C4DB20", "https://scontent.fsgn5-3.fna.fbcdn.net/v/t1.6435-9/107102136_885644648609558_8451026463102443657_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=iPxtHruJo1wAX8xooHX&_nc_ht=scontent.fsgn5-3.fna&oh=00_AT9M9-M80XgDCFZIKxcYfE5n72USdtdwEv8omF8MqF2NxQ&oe=62C58043"];
+  
+ var count = 0;
+ var imageCount = 0;
+  return function(){
+  root.style.setProperty('--image', "url(" + bImages[++count % phrases.length] + ")");
+  buttonText.textContent = phrases[++imageCount % phrases.length];
+  };
+}());
+
+
+/* if(count>7){
+  do: release balloons/confetti/or something cool;
+}
+*/
+      </script>
+</body>
+</html>
